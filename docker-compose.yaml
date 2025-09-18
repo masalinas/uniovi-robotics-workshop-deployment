@@ -1,0 +1,75 @@
+services:
+  database:
+    image: mongo
+    container_name: iot-database
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=iotdb
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password      
+    volumes:
+      - ./config-database/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - iot_data:/data/db   
+    networks:
+      - network-name
+
+  broker:
+    image: eclipse-mosquitto
+    container_name: iot-broker
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - ./config-broker:/mosquitto/config
+      - broker_data:/mosquitto/data
+      - broker_log:/mosquitto/log
+    networks:
+      - network-name
+
+  backend:
+    build:
+      context: ../uniovi-robotics-workshop-backend
+    depends_on:
+      - database
+    container_name: iot-backend
+    ports:
+      - 3000:3000     
+    networks:
+      - network-name
+
+  #gateway:
+  #  build:
+  #    context: ../iot-uniovi-service-gateway
+  #  depends_on:
+  #    - backend      
+  #  container_name: ito-gateway
+  #  ports:
+  #    - 1880:1880
+  #    - 1885:1885
+  #  environment:
+  #    - TZ=Europe/Madrid
+  #  volumes:
+  #    - ./config-gateway:/data
+  #  networks:
+  #    - network-name
+      
+  #frontend:
+  #  build:
+  #    context: ../iot-uniovi-service-frontend
+  #  depends_on:
+  #    - backend    
+  #  container_name: iot-frontend
+  #  ports:
+  #    - 4200:80
+  #  networks:
+  #    - network-name      
+
+volumes:
+  iot_data:
+  broker_data:
+  broker_log:
+
+networks:
+    network-name:
+      name: uniovi
