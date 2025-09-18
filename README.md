@@ -4,39 +4,40 @@ IoT Deployment Uniovi Robotics Workshop
 ## IoT Architecture
 ![IoT Architecture](captures/iot_architecture.drawio.png "IoT Architecture")
 
-## Deploy all stack services and compile
-In powershell
+## Deploy docker stack service and compile
+Deploy docker stack on development
 ```
-$env:NODE_ENV="development"; npm run start
-```
-
-```shell
-NODE_ENV=development docker compose up --build
+$ docker compose -f docker-compose.dev.yaml up -d --build
 ```
 
-## Stop stack service
+Deploy docker stack on production
 ```shell
-docker-compose stop
+$ docker compose up -d --build
 ```
 
-## Restart stack service
+## Stop docker stack
 ```shell
-docker-compose start
+$ docker-compose stop
 ```
 
-## Remove stack service resources
+## Restart docker stack
 ```shell
-docker-compose down
+$ docker-compose start
+```
+
+## Remove docker stack
+```shell
+$ docker-compose down
 ```
 
 remove volumes too
 ```shell
-docker-compose down -v
+$ docker-compose down -v
 ```
 
-## Get service logs
+## Get all docker stack service logs
 ```shell
-docker-compose logs
+$ docker-compose logs
 ```
 
 ## Some IoT UIs

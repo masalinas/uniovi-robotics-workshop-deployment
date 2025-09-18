@@ -34,7 +34,9 @@ services:
       - database
     container_name: iot-backend
     ports:
-      - 3000:3000     
+      - 3000:3000
+    environment:
+      - NODE_ENV=production
     networks:
       - network-name
 
