@@ -6,7 +6,7 @@ This MongoDB data:
 - **Init database**: iotdb
 - **Creare a default iotdb account**: maiind/password
 ```
-docker run -d \
+$ docker run -d \
   --name iot-mongo \
   -p 27017:27017 \
   -e MONGO_INITDB_ROOT_USERNAME=admin \
