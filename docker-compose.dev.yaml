@@ -27,6 +27,19 @@ services:
     networks:
       - network-name
 
+  gateway:
+    image: nodered/node-red
+    depends_on:
+      - backend     
+    container_name: ito-gateway
+    ports:
+      - 1880:1880
+      - 1885:1885
+    environment:
+      - TZ=Europe/Madrid
+    networks:
+      - network-name
+
 volumes:
   iot_data:
   broker_data:

@@ -28,3 +28,6 @@ Recover the default settings.js from host to be configured in our container
 ```
 $ docker cp iot-gateway:/usr/src/node-red/node_modules/node-red/settings.js ./
 ```
+
+# Inside container
+When the container start the working folder is **/usr/src/node-red** but the data is saved in **/data**

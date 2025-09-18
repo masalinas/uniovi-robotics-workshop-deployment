@@ -40,21 +40,19 @@ services:
     networks:
       - network-name
 
-  #gateway:
-  #  build:
-  #    context: ../iot-uniovi-service-gateway
-  #  depends_on:
-  #    - backend      
-  #  container_name: ito-gateway
-  #  ports:
-  #    - 1880:1880
-  #    - 1885:1885
-  #  environment:
-  #    - TZ=Europe/Madrid
-  #  volumes:
-  #    - ./config-gateway:/data
-  #  networks:
-  #    - network-name
+  gateway:
+    build:
+      context: ./config-gateway
+    depends_on:
+      - backend     
+    container_name: iot-gateway
+    ports:
+      - 1880:1880
+      - 1885:1885
+    environment:
+      - TZ=Europe/Madrid
+    networks:
+      - network-name
       
   #frontend:
   #  build:
