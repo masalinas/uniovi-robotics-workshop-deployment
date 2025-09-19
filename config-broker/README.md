@@ -31,6 +31,8 @@ $ mosquitto_sub -d -h localhost -p 1883 -u admin -P password -t T01
 Publish to broker to T01 topic
 ```
 $ mosquitto_pub -d -h localhost -p 1883 -u admin -P password -t T01 -m 16.89
+$ mosquitto_pub -d -h localhost -p 1883 -u admin -P password -t sensors/T01/data -m '{"accX": 43.5, "accY": 13.3, "accZ": 47.1}'
+
 ```
 
 # Some links
