@@ -28,9 +28,7 @@ services:
       - network-name
 
   gateway:
-    image: nodered/node-red
-    depends_on:
-      - backend     
+    image: nodered/node-red  
     container_name: ito-gateway
     ports:
       - 1880:1880
