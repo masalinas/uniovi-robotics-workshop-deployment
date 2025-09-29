@@ -44,7 +44,7 @@ $ docker-compose logs
 
 - **Uniovi network** from [portainer](https://localhost:9443) we could check the uniovi network
 
-![Uniovi net](captures/iot_network.png "Uniovi net")
+![IoT Docker Stack](captures/iot_stack.png "IoT Docker Stack")
 
 - **API Explorer** from [Loopback Explorer](http://localhost:3000/explorer) we could check the backend API
 
@@ -54,10 +54,6 @@ $ docker-compose logs
 
 ![node-RED Designer](captures/node-RED_designer.png "node-RED Designer")
 
-- **node-RED Dashboard** from [IoT Dashboard](http://localhost:4200) we could check the iot sensors graphs:
+- **Frontend Dashboard** from [IoT Dashboard](http://localhost:4200) we could check the iot sensors graphs:
  
-![IoT Frontend Realtime](captures/iot_ui_RT.png "IoT Frontend Realtime")
-
-- **node-RED Dashboard** from [IoT Dashboard](http://localhost:4200) we could check the iot sensors historic:
- 
-![IoT Frontend Historic](captures/iot_ui_historic.png "IoT Frontend Historic")
+![IoT Frontend Realtime](captures/iot_frontend.png "IoT Frontend Realtime")
