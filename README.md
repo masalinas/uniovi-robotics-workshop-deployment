@@ -7,7 +7,7 @@ IoT Deployment Uniovi Robotics Workshop
 ## Deploy docker stack service and compile
 Deploy docker stack on development
 ```
-$ docker compose -f docker-compose.dev.yaml up -d --build
+$ docker compose -f docker-compose.dev.yaml up -d
 ```
 
 Deploy docker stack on production
