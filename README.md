@@ -80,4 +80,4 @@ One IoT Future Architecture coulb be integrate IA in our Architecture to recover
 
 An IoT IA Architeture could be:
 
-![IoT Ia](Iot_IA.png)
+![IoT Ia](./captures/Iot_IA.png)
