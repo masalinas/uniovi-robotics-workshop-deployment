@@ -40,6 +40,13 @@ $ docker-compose down -v
 $ docker-compose logs
 ```
 
+## Publish mqtt port
+In windows in case not use docker Desktop and install Docker inside WSL2 directly your services can not be access externally to your computer so you must publish them using tools like ngrok. Create an account in ngrok and create a new AUTH_TOKEN from your account:
+
+```shell
+docker run --name iot-proxy --net=host -it --rm -e NGROK_AUTHTOKEN=<AUTH_TOKEN> ngrok/ngrok:latest tcp 1883
+```
+
 ## Some IoT UIs
 
 - **Uniovi network** from [portainer](https://localhost:9443) we could check the uniovi network
