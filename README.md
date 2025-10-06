@@ -7,7 +7,7 @@ IoT Deployment Uniovi Robotics Workshop
 ## Deploy docker stack service and compile
 Deploy docker stack on development
 ```
-$ docker compose -f docker-compose.dev.yaml up -d --build
+$ docker compose -f docker-compose.dev.yaml up -d
 ```
 
 Deploy docker stack on production
@@ -64,3 +64,20 @@ docker run --name iot-proxy --net=host -it --rm -e NGROK_AUTHTOKEN=<AUTH_TOKEN> 
 - **Frontend Dashboard** from [IoT Dashboard](http://localhost:4200) we could check the iot sensors graphs:
  
 ![IoT Frontend Realtime](captures/iot_frontend.png "IoT Frontend Realtime")
+
+## IoT Future
+
+One IoT Future Architecture coulb be integrate IA in our Architecture to recover information from our IoT Dataset or send commands to our microcontrolles using:
+
+- Implement NLP (Natural Language Processing) using LLM (Large Language models) models like: [Llama](https://www.llama.com/), [Deepseek](https://www.deepseek.com/).
+
+- Use Protocols like [MCP (Model Context Protocol)](https://modelcontextprotocol.io/docs/getting-started/intro) to implement RAG (Retrieval Augmented Generation) to integrate our LLM models with our business services.
+
+- Use LLM tools like [LM Studio](https://lmstudio.ai/) to:
+    - Manage and control our LLM models easy and visually.
+    - Host our MCP Servers to implement RAG
+    - Offer an API to send prompts to our LLM models
+
+An IoT IA Architeture could be:
+
+![IoT Ia](Iot_IA.png)
