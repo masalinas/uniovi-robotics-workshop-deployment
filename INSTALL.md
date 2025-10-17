@@ -20,6 +20,10 @@ Prepare your development environment:
   
   [https://docs.docker.com/desktop/setup/install/windows-install](https://docs.docker.com/desktop/setup/install/windows-install)
 
+- Install Mosquitto Pub/Sub: testing MQTT 
+
+  [https://mosquitto.org/download](https://mosquitto.org/download)
+
 
 
 
