@@ -1,6 +1,7 @@
 Prepare your development environment:
 
 - Install Arduino IDE:
+  
   [https://www.arduino.cc/en/software/](https://www.arduino.cc/en/software/)
 
 - Install board drivers ESP32:
@@ -14,4 +15,5 @@ Prepare your development environment:
 
 - Install Docker: Docker Desktop:
   https://docs.docker.com/desktop/setup/install/windows-install/
+
 
