@@ -55,7 +55,7 @@ docker run --name iot-proxy --net=host -it --rm -e NGROK_AUTHTOKEN=<AUTH_TOKEN> 
 
 - **API Explorer** from [Loopback Explorer](http://localhost:3000/explorer) we could check the backend API
 
-![API Explorer](captures/api-explorer.png "API Explorer")
+![API Explorer](captures/iot_swagger.png "API Explorer")
 
 - **node-RED Designer** from [node-RED Designer](http://localhost:1880) we could check the iot flows:
 
@@ -64,6 +64,10 @@ docker run --name iot-proxy --net=host -it --rm -e NGROK_AUTHTOKEN=<AUTH_TOKEN> 
 - **Frontend Dashboard** from [IoT Dashboard](http://localhost:4200) we could check the iot sensors graphs:
  
 ![IoT Frontend Realtime](captures/iot_frontend.png "IoT Frontend Realtime")
+
+## Some links
+
+- [Mosquitto clients](https://mosquitto.org/download/)
 
 ## IoT Future
 
