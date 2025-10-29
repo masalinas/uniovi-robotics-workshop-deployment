@@ -68,7 +68,9 @@ docker run --name iot-proxy --net=host -it --rm -e NGROK_AUTHTOKEN=<AUTH_TOKEN> 
 ## Some links
 
 - [Portainer](https://docs.portainer.io/start/install-ce/server/docker)
+
 - [Mosquitto clients](https://mosquitto.org/download/)
+
 - [NVM for Windows](https://github.com/coreybutler/nvm-windows/releases)
 
 ## Some commands:
