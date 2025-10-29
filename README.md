@@ -69,6 +69,20 @@ docker run --name iot-proxy --net=host -it --rm -e NGROK_AUTHTOKEN=<AUTH_TOKEN> 
 
 - [Mosquitto clients](https://mosquitto.org/download/)
 
+## Some commands:
+
+To test your broker publish some mock data execute this command:
+
+First subscribe to a topic called sensors/T01/data
+```
+mosquitto_sub -d -h localhost -p 1883 -u admin -P password -t sensors/T01/data
+```
+
+Second publish a mock measure to the same topic sensors/T01/data
+```
+mosquitto_pub -d -h localhost -p 1883 -u admin -P password -t sensors/T01/data -m '{"accX": 23.5, "accY": 9.3, "accZ": 10.1}'
+```
+
 ## IoT Future
 
 One IoT Future Architecture coulb be integrate IA in our Architecture to recover information from our IoT Dataset or send commands to our microcontrolles using:
