@@ -40,7 +40,7 @@ services:
       - TZ=Europe/Madrid
     networks:
       - network-name
-
+  
   backend:
     build:
       context: ../uniovi-robotics-workshop-backend
