@@ -27,19 +27,6 @@ services:
     networks:
       - network-name
 
-  backend:
-    build:
-      context: ../uniovi-robotics-workshop-backend
-    depends_on:
-      - database
-    container_name: iot-backend
-    ports:
-      - 3000:3000
-    environment:
-      - NODE_ENV=production
-    networks:
-      - network-name
-
   gateway:
     build:
       context: ./config-gateway
@@ -53,10 +40,23 @@ services:
       - TZ=Europe/Madrid
     networks:
       - network-name
-      
+
+  backend:
+    build:
+      context: ../uniovi-robotics-workshop-backend
+    depends_on:
+      - database
+    container_name: iot-backend
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=production
+    networks:
+      - network-name
+            
   frontend:
     build:
-      context: ../iot-uniovi-service-frontend
+      context: ../uniovi-robotics-workshop-frontend
     depends_on:
       - backend    
     container_name: iot-frontend
